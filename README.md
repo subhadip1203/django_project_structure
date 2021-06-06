@@ -23,7 +23,10 @@ To list all the installed packages : `pip freeze > requirements.txt`
 ##  divide project in different moules : like V1 , V2 , etc
 create folder V1 and make a file __init__.py: `mkdir V1 && touch V1/__init__.py` 
 
+### create project 
 
+command: `django-admin startproject Project_SetUp .` <br>
+( dot at the end of the command will seperate the "Project_SetUp" in a separate folder than other apps)
 
 ## create an app ( example : inside V1 folder  )
 
