@@ -50,3 +50,20 @@ INSTALLED_APPS = (
 +    'V1.app2',
     ...
 )
+
+## fat model 
+simple model example : <br>
+
+```
+class Course(models.Model):
+    name = models.CharField(unique=True, max_length=255)
+    ....
+
+    def clean(self):
+        if len(self.name) < 5 :
+            raise ValidationError("End date cannot be before start date!")
+                
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super().save(*args, **kwargs)     
+```
